@@ -1,1 +1,67 @@
-我们从零开始学习javacript，这个网站和我一起成长中ING........
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>简易计算器</title>
+</head>
+<style>
+	input{
+		height: 30px;
+		margin: 5px;
+	}
+	hr {
+		width: 280px;
+				
+	}
+	
+</style>
+<script>
+	window.onload=function (){
+	// var	s=145
+	// alert(parseInt(s/60)+'分'+s%60+'秒');
+	var aTxt1=document.getElementById("txt1");
+	var aTxt2=document.getElementById("txt2");
+	var aTxt3=document.getElementById("txt3");
+	var aTn1=document.getElementById("btn1");
+	var aTn2=document.getElementById("btn2");
+	var aTn3=document.getElementById("btn3");
+	var aTn4=document.getElementById("btn4");
+	var aTn5=document.getElementById("btn5");
+		aTn1.onclick=function()
+		{
+		 aTxt3.value=parseInt(aTxt1.value)+parseInt(aTxt2.value);
+		
+		}
+	 	aTn2.onclick=function(){
+		aTxt3.value=parseInt(aTxt1.value)-parseInt(aTxt2.value);
+		// alert(aTxt3.value);
+	 	}
+	 	aTn3.onclick=function(){
+		aTxt3.value=parseInt(aTxt1.value)*parseInt(aTxt2.value);
+		// alert(aTxt3.value);
+	 	}
+	 	aTn4.onclick=function(){
+		aTxt3.value=parseInt(aTxt1.value)/parseInt(aTxt2.value);
+		// alert(aTxt3.value);
+	 	}
+	 	aTn5.onclick=function(){
+	 		aTxt1.value=0;
+	 		aTxt2.value=0;
+			aTxt3.value=0;
+		// alert(aTxt3.value);
+	 	}
+	}
+	</script>
+<body>
+	<input type="text" id='txt1' ><br>
+	<input type="text" id='txt2' ><br>	
+	<input type="button" id='btn1' value=" 加 " >
+	<input type="button" id='btn2' value=" 减 " >
+	<input type="button" id='btn3' value=" 乘 " >
+	<input type="button" id='btn4' value=" 除 " >
+	<input type="button" id='btn5' value=" 归零 ">
+	<hr align="left" >
+	<input type="text" id='txt3' >
+
+</body>
+</html>
